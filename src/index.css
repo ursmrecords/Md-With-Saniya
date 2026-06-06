@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@theme {
+  --color-romantic-pink: #ff7597;
+  --color-romantic-dark: #ff4d73;
+  --color-soft-cream: #fff0f3;
+  --font-romantic: "Dancing Script", cursive;
+  --font-sans: "Poppins", sans-serif;
+}
+
+@layer utilities {
+  /* Floating Hearts Animation */
+  .heart-bubble {
+    position: absolute;
+    bottom: -60px;
+    color: rgba(255, 117, 151, 0.65);
+    animation: floatUp 7s linear infinite;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) scale(0) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-110vh) scale(1.6) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* Shaking effect for wrong answers */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-8px); }
+    40%, 80% { transform: translateX(8px); }
+  }
+
+  .shake-anim {
+    animation: shake 0.4s ease-in-out;
+  }
+}

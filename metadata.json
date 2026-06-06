@@ -1,0 +1,6 @@
+{
+  "name": "Proposal and Quiz for Saniya",
+  "description": "A beautiful proposal, quiz, and interactive love messenger for Saniya, featuring custom romantic styling and a server-side Gemini-powered conversation mode.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
